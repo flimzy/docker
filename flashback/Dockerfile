@@ -4,7 +4,7 @@ FROM flimzy/gopherjs
 RUN go get -u gopkg.in/alecthomas/gometalinter.v2 && gometalinter.v2 --install
 
 # Flashback-specific deps
-RUN npm install -g browserify cordova
+RUN npm install -g browserify cordova uglify-js
 RUN go get -u github.com/jteeuwen/go-bindata/...
 
 # JDK dependencies
