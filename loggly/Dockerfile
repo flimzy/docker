@@ -1,18 +1,5 @@
-#################################################################
-#
-#                    ##        .
-#              ## ## ##       ==
-#           ## ## ## ##      ===
-#       /""""""""""""""""\___/ ===
-#  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
-#       \______ o          __/
-#         \    \        __/
-#          \____\______/
-#
-#################################################################
-
-FROM alpine:3.3
-MAINTAINER Jonathan Short <jonathan.short@sendgrid.com>
+FROM alpine:3.6
+MAINTAINER Jonathan Hall <flimzy@flimzy.com>
 
 RUN apk add --update rsyslog rsyslog-tls && rm -rf /var/cache/apk/*
 
@@ -25,4 +12,3 @@ EXPOSE 514
 EXPOSE 514/udp
 
 CMD ["/tmp/run.sh"]
-
