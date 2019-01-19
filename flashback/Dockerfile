@@ -19,7 +19,7 @@ RUN mkdir -p ${ANDROID_HOME} && cd ${ANDROID_HOME} && \
     unzip android-sdk.zip && \
     rm android-sdk.zip
 
-# 19 = Android 4.4/KitKat
 # 26 = Android 8.0/Oreo
-RUN sdkmanager --update && yes | sdkmanager "platforms;android-26" "build-tools;26.0.3" "extras;android;m2repository"
-# RUN sdkmanager --update && yes | sdkmanager "platforms;android-19" "build-tools;19.1.0" "extras;android;m2repository"
+# 27 = Android 8.1
+# 28 = Android 9
+RUN sdkmanager --update && yes | sdkmanager "platforms;android-28" "build-tools;28.0.3" "extras;android;m2repository"
